@@ -37,7 +37,7 @@ public class User {
 
     @NotNull
     @PastOrPresent
-    private Date creationDate;
+    private Date creationDate = new Date();
 
     @NotNull
     @Pattern(regexp = "organization_A|organization_B|organization_C") //one of this three
