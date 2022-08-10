@@ -1,0 +1,16 @@
+Tasks\controllers\ModificationHistoryController.class
+Tasks\entities\TaskModificationHistory.class
+Tasks\repo\UserModificationHistoryRepo.class
+Tasks\entities\User.class
+Tasks\repo\TaskModificationHistoryRepo.class
+Tasks\repo\UserRepo.class
+Tasks\controllers\TaskController.class
+Tasks\entities\Task.class
+Tasks\JSON\IdAndDate.class
+Tasks\TasksApplication.class
+Tasks\services\TaskService.class
+Tasks\repo\TaskRepo.class
+Tasks\entities\UserModificationHistory.class
+Tasks\services\ModificationHistoryService.class
+Tasks\controllers\UserController.class
+Tasks\services\UserService.class
