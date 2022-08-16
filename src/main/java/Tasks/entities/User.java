@@ -64,12 +64,10 @@ public class User {
         modificationHistory = new ArrayList<>();
     }
 
-    public User(String id, String firstName, String lastName, Date dateOfBirth, Date creationDate, String organizationUnit, String team, Integer experienceLevel) {
-        this.id = id;
+    public User(String firstName, String lastName, Date dateOfBirth, String organizationUnit, String team, Integer experienceLevel) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.dateOfBirth = dateOfBirth;
-        this.creationDate = creationDate;
         this.organizationUnit = organizationUnit;
         this.team = team;
         this.experienceLevel = experienceLevel;
