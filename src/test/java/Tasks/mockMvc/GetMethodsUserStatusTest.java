@@ -1,7 +1,7 @@
-package Tasks.services.mockMvc;
+package Tasks.mockMvc;
 
-import Tasks.controllers.TaskController;
-import Tasks.services.TaskService;
+import Tasks.controllers.UserController;
+import Tasks.services.UserService;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
@@ -13,11 +13,11 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
-@WebMvcTest(controllers = TaskController.class)
-public class GetMethodsTaskStatusTest {
+@WebMvcTest(controllers = UserController.class)
+public class GetMethodsUserStatusTest {
 
     @MockBean
-    TaskService taskService;
+    UserService userService;
 
     @Autowired
     MockMvc mockMvc;
@@ -25,7 +25,7 @@ public class GetMethodsTaskStatusTest {
     @Test
     void shouldGetAllUsersOkStatus() throws Exception {
 
-        mockMvc.perform(get("/task/all"))
+        mockMvc.perform(get("/user/all"))
                 .andExpect(status().isOk())
                 .andExpect(content().contentType(MediaType.APPLICATION_JSON_VALUE));
     }
@@ -33,7 +33,7 @@ public class GetMethodsTaskStatusTest {
     @Test
     void shouldGetAllDeletedUsersOkStatus() throws Exception {
 
-        mockMvc.perform(get("/task/allDeleted"))
+        mockMvc.perform(get("/user/allDeleted"))
                 .andExpect(status().isOk())
                 .andExpect(content().contentType(MediaType.APPLICATION_JSON_VALUE));
     }

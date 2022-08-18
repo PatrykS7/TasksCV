@@ -1,6 +1,7 @@
 package Tasks.repo;
 
 import Tasks.entities.User;
+import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInstance;
@@ -53,6 +54,12 @@ class UserRepoTest {
         testId = underTest.save(firstUser).getId();
         underTest.save(secondUser);
         underTest.save(thirdUser);
+    }
+
+    @AfterAll
+    void emptyDatabase(){
+
+        underTest.deleteAll();
     }
 
     @Test
