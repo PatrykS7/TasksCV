@@ -53,7 +53,7 @@ public class User {
     private Integer experienceLevel;
 
     @JsonIgnore
-    List<String> modificationHistory;
+    List<String> modificationHistory = new ArrayList<>();
 
     @JsonIgnore
     private Boolean deleted = false;

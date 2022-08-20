@@ -29,6 +29,10 @@ public class TaskModificationHistory{
     private Integer maximumAgeInYears;
     private Boolean deleted;
 
+    public TaskModificationHistory(String id) {
+        this.id = id;
+    }
+
     public TaskModificationHistory(Task task) {
 
         this.modificationDate = new Date();

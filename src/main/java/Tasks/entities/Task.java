@@ -53,7 +53,7 @@ public class Task {
     private Integer maximumAgeInYears;
 
     @JsonIgnore
-    private List<String> modificationHistory;
+    private List<String> modificationHistory = new ArrayList<>();
 
     @JsonIgnore
     private Boolean deleted = false;
@@ -61,6 +61,18 @@ public class Task {
     public Task() {
 
         this.modificationHistory = new ArrayList<>();
+    }
+
+    public Task(String title, Integer numberOfSubtasks, Integer priority, Date creationDate, Boolean allConditionsMustBeSatisfied, String organizationUnit, String team, Integer minimumExperienceLevel, Integer maximumAgeInYears) {
+        this.title = title;
+        this.numberOfSubtasks = numberOfSubtasks;
+        this.priority = priority;
+        this.creationDate = creationDate;
+        this.allConditionsMustBeSatisfied = allConditionsMustBeSatisfied;
+        this.organizationUnit = organizationUnit;
+        this.team = team;
+        this.minimumExperienceLevel = minimumExperienceLevel;
+        this.maximumAgeInYears = maximumAgeInYears;
     }
 
     public boolean fieldsAreNullValidation(){ //check if all nullable fields are null

@@ -48,4 +48,7 @@ public class UserModificationHistory{
         this.modificationDate = new Date();
     }
 
+    public UserModificationHistory(String id) {
+        this.id = id;
+    }
 }
